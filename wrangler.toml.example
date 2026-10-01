@@ -1,0 +1,18 @@
+# 示例配置。把 database_id 换成你创建的 D1 数据库 ID。
+name = "lumen-archive"
+compatibility_date = "2026-09-14"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lumen-archive-db"
+database_id = "YOUR_D1_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "lumen-archive-media"
+
+# 私人文档 R2：请创建一个不公开的 bucket，并在 Cloudflare Pages 中绑定同名变量。
+[[r2_buckets]]
+binding = "PRIVATE_MEDIA"
+bucket_name = "lumen-archive-private"
